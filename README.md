@@ -37,7 +37,7 @@ Modern full stack task management application built with React, Node.js, Express
 
 ### Dashboard
 
-![Dashboard](./taskflow/screenshots/dashboard.png)
+![Dashboard](./taskflow/screenshots/Dashboard.png)
 
 ---
 
