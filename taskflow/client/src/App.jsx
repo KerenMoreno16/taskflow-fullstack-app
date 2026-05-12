@@ -21,7 +21,7 @@ function App() {
   }, [])
 
   async function fetchTasks() {
-    const res = await axios.get('http://localhost:5000/tasks')
+    const res = await axios.get('taskflow-fullstack-app-six.vercel.app/tasks')
     setTasks(res.data)
   }
 
