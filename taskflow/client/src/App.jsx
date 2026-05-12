@@ -21,14 +21,14 @@ function App() {
   }, [])
 
   async function fetchTasks() {
-    const res = await axios.get('taskflow-fullstack-app-six.vercel.app/')
+    const res = await axios.get('taskflow-fullstack-app-six.vercel.app/tasks')
     setTasks(res.data)
   }
 
   async function createTask() {
     if (!title) return
 
-    await axios.post('http://localhost:5000/tasks', {
+    await axios.post('taskflow-fullstack-app-six.vercel.app/tasks', {
       title,
     })
 
@@ -37,12 +37,12 @@ function App() {
   }
 
   async function deleteTask(id) {
-    await axios.delete(`http://localhost:5000/tasks/${id}`)
+    await axios.delete(`taskflow-fullstack-app-six.vercel.app/tasks/${id}`)
     fetchTasks()
   }
 
   async function updateTask(id) {
-  await axios.put(`http://localhost:5000/tasks/${id}`, {
+  await axios.put(`taskflow-fullstack-app-six.vercel.app/tasks/${id}`, {
     title: editTitle,
   })
 
